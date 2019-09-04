@@ -171,13 +171,19 @@ xterm*|rxvt*)
 esac
 
 # reed's laziness spreading
-alias l='clear;ls -lh'
-alias ll='clear;ls -alh'
-alias ..='cd ..;clear;ls -lh'
 alias c='clear'
+alias l='c;ls -lh'
+alias ll='c;ls -alh'
+
+function cd {
+  builtin cd $1
+  l
+}
+
+alias ..='cd ..'
 alias sbc='source ~/.bashrc'
 alias e='exit'
-alias gs='git branch'
+alias gb='git branch'
 alias gs='git status'
 alias ds='docker ps -a'
 alias xc='xclip -sel clip'
