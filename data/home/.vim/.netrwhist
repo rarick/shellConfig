@@ -1,0 +1,8 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='/home/rarick/Documents/wosa/.git'
+let g:netrw_dirhist_2='/home/rarick/Documents/go/src/popdb'
+let g:netrw_dirhist_3='/home/rarick/bin'
+let g:netrw_dirhist_4='/home/rarick/Documents/mdbTestingApp/assets'
+let g:netrw_dirhist_5='/mnt/c/Projects/inputs/.git'
+let g:netrw_dirhist_6='/mnt/c/Users/Employee/Anaconda3/envs/argusnet/Lib/site-packages/networkx/readwrite'

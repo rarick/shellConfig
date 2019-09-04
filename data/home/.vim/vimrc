@@ -6,10 +6,10 @@ syntax enable		" Enables syntax processing
 """""""""""""""""""""""""""""""""""""""""""""""""""
 " Spaces and tabs
 """""""""""""""""""""""""""""""""""""""""""""""""""
-set tabstop=2		" 4 visual spaces per tab
-set softtabstop=2	" inserts 4 spaces per tab when editing
+set tabstop=4		" 4 visual spaces per tab
+set softtabstop=4	" inserts 4 spaces per tab when editing
 set expandtab		" converts tabs to spaces
-set shiftwidth=2    " 4 spaces per indentation level
+set shiftwidth=4    " 4 spaces per indentation level
 
 """""""""""""""""""""""""""""""""""""""""""""""""""
 " UI
@@ -94,6 +94,8 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'junegunn/vim-easy-align'
 
 Plug 'sheerun/vim-polyglot'
+
+Plug 'tomtom/tcomment_vim'
 
 " Initialize plugin system
 call plug#end()
