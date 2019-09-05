@@ -177,7 +177,7 @@ alias ll='c;ls -alh'
 
 function cd {
   builtin cd $1
-  command l
+  l
 }
 
 alias ..='cd ..'
