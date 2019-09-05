@@ -177,13 +177,21 @@ alias ll='c;ls -alh'
 
 function cd {
   builtin cd $1
-  l
+  command l
 }
 
 alias ..='cd ..'
 alias sbc='source ~/.bashrc'
 alias e='exit'
-alias gb='git branch'
-alias gs='git status'
-alias ds='docker ps -a'
+alias gb='c;git branch'
+alias gs='c;git status'
+alias ga='git add .;gs'
+
+function gc {
+  git commit -m "$1"
+}
+
+alias gr='git reset'
+
+alias ds='c;docker ps -a'
 alias xc='xclip -sel clip'
