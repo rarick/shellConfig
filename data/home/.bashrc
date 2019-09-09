@@ -188,7 +188,7 @@ alias gs='c;git status'
 alias ga='git add .;gs'
 
 function gc {
-  git commit -m "$1"
+  git commit -m "$@"
 }
 
 alias gr='git reset'
