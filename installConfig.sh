@@ -20,7 +20,6 @@ while getopts ":h" opt; do
 done
 
 DATA_DIR=$(dirname "$0")/data
-ETC_DIR=$DATA_DIR/etc
 HOME_DIR=$DATA_DIR/home
 
 # Input configuration files
@@ -29,6 +28,4 @@ shopt -s dotglob nullglob
 cp -r $HOME_DIR/* ~
 echo "Done."
 
-echo -n "Copying files to etc... "
-sudo cp $ETC_DIR/* /etc
-echo "Done."
+tmux source-file ~/.tmux.conf
