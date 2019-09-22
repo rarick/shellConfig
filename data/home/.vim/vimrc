@@ -79,6 +79,11 @@ nnoremap k gk
 nnoremap gV `[v`]
 inoremap jk <ESC>
 
+" move bewtween buffers with ctrl+tab
+nnoremap <C-Tab> :bn<CR>
+nnoremap <C-S-Tab> :bp<CR>
+
+
 " shift+k splits a line
 nnoremap <S-K> i<CR><ESC>
 
