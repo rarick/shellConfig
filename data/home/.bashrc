@@ -170,6 +170,9 @@ xterm*|rxvt*)
     ;;
 esac
 
+export EDITOR='vim'
+export VISUAL='vim'
+
 # reed's laziness spreading
 alias c='clear'
 alias l='c;ls -lh'
