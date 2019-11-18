@@ -32,6 +32,9 @@ HOME_DATA_DIR=$DATA_DIR/home
 echo -n "Copying files to home... "
 shopt -s dotglob nullglob
 cp -r $HOME_DATA_DIR/* ~
-echo "Done"
 
+echo -n "Installing tmux configuration..."
 tmux source-file ~/.tmux.conf
+
+echo -n "Installing vim plugins..."
+vim +PlugInstall +PlugUpdate +PlugClean +qall
