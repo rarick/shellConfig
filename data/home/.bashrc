@@ -200,4 +200,4 @@ alias dh='git diff HEAD'
 alias ds='c;docker ps -a'
 alias xc='xclip -sel clip'
 
-alias ranger='source ranger'
+alias r='source ranger'
