@@ -1,7 +1,13 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""
-" Colors
+" Themes
 """""""""""""""""""""""""""""""""""""""""""""""""""
 syntax enable		" Enables syntax processing
+
+" Airline
+let g:airline_theme='dracula'
+set noshowmode
+let g:airline_powerline_fonts=1
+set t_Co=256
 
 """""""""""""""""""""""""""""""""""""""""""""""""""
 " Spaces and tabs
@@ -102,5 +108,12 @@ Plug 'sheerun/vim-polyglot'
 
 Plug 'tomtom/tcomment_vim'
 
+Plug 'vim-airline/vim-airline'
+
+Plug 'vim-airline/vim-airline-themes'
+
+Plug 'tpope/vim-fugitive'
+
 " Initialize plugin system
 call plug#end()
+
