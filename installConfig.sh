@@ -39,5 +39,5 @@ tmux source-file ~/.tmux.conf
 echo "Done."
 
 echo -n "Installing vim plugins... "
-vim +PlugInstall +PlugUpdate +PlugClean +qall
+vim +PlugUpdate +PlugInstall +PlugClean +qall
 echo "Done."

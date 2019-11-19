@@ -108,6 +108,8 @@ Plug 'sheerun/vim-polyglot'
 
 Plug 'tomtom/tcomment_vim'
 
+Plug 'dracula/vim'
+
 Plug 'vim-airline/vim-airline'
 
 Plug 'vim-airline/vim-airline-themes'
