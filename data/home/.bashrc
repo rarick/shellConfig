@@ -201,3 +201,8 @@ alias ds='c;docker ps -a'
 alias xc='xclip -sel clip'
 
 alias r='source ranger'
+
+function fix-permissions {
+  find $* -type f -exec chmod 644 {} \;
+  find $* -type d -exec chmod 755 {} \;
+}
