@@ -8,10 +8,12 @@ Usage: installConfig.sh [options...]
 Options:
   -h: Display this usage message and exit
   -i: Install required packages
+  -p: Install and update plugins
 
 EOF
 
 }
+
 
 TPM_DIR=~/.tmux/plugins/tpm
 
@@ -21,8 +23,23 @@ install_packages () {
   git clone https://github.com/tmux-plugins/tpm $TPM_DIR
 }
 
+
+update_plugins () {
+  echo "Installing tmux configuration...  "
+  tmux source-file ~/.tmux.conf
+  $TPM_DIR/bin/update_plugins
+  $TPM_DIR/bin/install_plugins
+  $TPM_DIR/bin/clean_plugins
+  echo "Done."
+
+  echo -n "Installing vim plugins...  "
+  vim +PlugUpdate +PlugInstall +PlugClean +qall
+  echo "Done."
+}
+
+
 # Get input arguments
-while getopts ":hi" opt; do
+while getopts ":hip" opt; do
   case $opt in
     h)
       print_usage
@@ -30,7 +47,9 @@ while getopts ":hi" opt; do
       ;;
     i)
       install_packages
-      exit 0
+      ;;
+    p)
+      update_plugins
       ;;
     \?)
       echo "Invalid option: -$OPTARG"
@@ -47,15 +66,4 @@ HOME_DATA_DIR=$DATA_DIR/home
 echo -n "Copying files to home...  "
 shopt -s dotglob nullglob
 cp -r $HOME_DATA_DIR/* ~
-echo "Done."
-
-echo "Installing tmux configuration...  "
-tmux source-file ~/.tmux.conf
-$TPM_DIR/bin/update_plugins
-$TPM_DIR/bin/install_plugins
-$TPM_DIR/bin/clean_plugins
-echo "Done."
-
-echo -n "Installing vim plugins...  "
-vim +PlugUpdate +PlugInstall +PlugClean +qall
 echo "Done."
