@@ -18,7 +18,9 @@ EOF
 TPM_DIR=~/.tmux/plugins/tpm
 
 install_packages () {
-  sudo apt-get install tmux vim ranger
+  sudo apt-get install tmux vim ranger git curl
+
+  curl https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim --create-dirs -o ~/.vim/autoload/plug.vim
 
   git clone https://github.com/tmux-plugins/tpm $TPM_DIR
 }
