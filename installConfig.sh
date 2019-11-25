@@ -13,10 +13,12 @@ EOF
 
 }
 
+TPM_DIR=~/.tmux/plugins/tpm
+
 install_packages () {
   sudo apt-get install tmux vim ranger
 
-  git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+  git clone https://github.com/tmux-plugins/tpm $TPM_DIR
 }
 
 # Get input arguments
@@ -47,8 +49,11 @@ shopt -s dotglob nullglob
 cp -r $HOME_DATA_DIR/* ~
 echo "Done."
 
-echo -n "Installing tmux configuration...  "
+echo "Installing tmux configuration...  "
 tmux source-file ~/.tmux.conf
+$TPM_DIR/bin/update_plugins
+$TPM_DIR/bin/install_plugins
+$TPM_DIR/bin/clean_plugins
 echo "Done."
 
 echo -n "Installing vim plugins...  "
