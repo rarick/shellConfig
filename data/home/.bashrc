@@ -179,7 +179,7 @@ alias l='c;ls -lh'
 alias ll='c;ls -alh'
 
 function cd {
-  builtin cd $1
+  [ -z "$*" ] && builtin cd ||  builtin cd "$*"
   l
 }
 
