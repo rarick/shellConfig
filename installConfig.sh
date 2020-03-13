@@ -29,7 +29,7 @@ install_packages () {
 update_plugins () {
   echo "Installing tmux configuration...  "
   tmux source-file ~/.tmux.conf
-  $TPM_DIR/bin/update_plugins
+  $TPM_DIR/bin/update_plugins all
   $TPM_DIR/bin/install_plugins
   $TPM_DIR/bin/clean_plugins
   echo "Done."
