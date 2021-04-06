@@ -33,12 +33,10 @@ set scrolloff=15    " Starts scrolling when within 15 of the margin
 " Relative numbering
 set nu
 function! ToggleNumbersOn()
-    set nu
     set rnu!
 endfunction
 function! ToggleRelativeOn()
     set rnu
-    set nu!
 endfunction
 autocmd InsertEnter * call ToggleRelativeOn()
 autocmd InsertLeave * call ToggleNumbersOn()
